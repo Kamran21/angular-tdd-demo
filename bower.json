@@ -1,0 +1,22 @@
+{
+  "name": "angular-tdd-demo",
+  "description": "tdd tuts course",
+  "main": "index.js",
+  "authors": [
+    "Kamran <kamran_irani1@yahoo.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8"
+  }
+}
