@@ -7,6 +7,12 @@
 </head>
 <body ng-app="addressBook">
 	<h1>Hello World!</h1>
+	<div ng-controller='contactsCtrl'>
+		<div ng-repeat="contact in contacts">
+			{{contact.name}}
+			<avatar name=contact.name></avatar>
+		</div>
+	</div>
 	
 	<script src="main.js"></script>
 </body>
