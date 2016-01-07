@@ -19,6 +19,7 @@
   "dependencies": {
     "angular": "~1.4.8",
     "mocha": "~2.3.4",
-    "chai": "~3.4.2"
+    "chai": "~3.4.2",
+    "karma": "~0.4.6"
   }
 }
