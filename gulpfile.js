@@ -3,6 +3,7 @@ var browserSync=require('browser-sync');
 var Karma = require('karma').Server;
 var server=require('gulp-live-server');
 var mocha = require('gulp-mocha');
+var protractor=require('gulp-protractor').protractor;
 
 gulp.task('server',function(){
 	var live=new server('server.js');
@@ -73,6 +74,15 @@ gulp.task('serve-test',function(){
 	gulp.watch(['app/**/*.*'])
 		.on('change',browserSync.reload);
 })
+
+gulp.task('protractor',['serve'],function(done){
+	gulp.src(["./src/tests/*.js"])
+	.pipe(protractor({
+			configFile: "test/protractor.config.js",
+			args: ['--baseUrl', 'http://127.0.0.1:8000']
+	}))
+	.on('end',done);
+});
 
 
 
